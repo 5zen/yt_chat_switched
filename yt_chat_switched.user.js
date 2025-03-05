@@ -4,7 +4,7 @@
 // @version      1.6
 // @description  Switch YouTube live chat from "Top Chat" to "Chat" automatically and remember the switch
 // @author       Your Name
-// @match        https://www.youtube.com/watch*
+// @match        https://www.youtube.com/*
 // @grant        none
 // ==/UserScript==
 
@@ -27,7 +27,7 @@
                 });
             }, 500);
         } else {
-//          console.error('チャットメニューボタンが見つかりません。');
+            console.error('チャットメニューボタンが見つかりません。');
         }
     }
 
@@ -35,7 +35,7 @@
         if (!localStorage.getItem(SWITCHED_KEY)) {
             switchChat();
         } else {
-//          console.log('「チャット」に既に切り替え済みです。');
+            console.log('「チャット」に既に切り替え済みです。');
         }
     }
 
